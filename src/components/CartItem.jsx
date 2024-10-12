@@ -1,7 +1,7 @@
 // CartItem.js
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { removeFromCart, increaseQuantity, decreaseQuantity } from '../features/cart/cartSlice';
+import { removeItem, increaseQuantity, decreaseQuantity } from '../cartSlice';
 
 import { getImagePath } from '../utils/basePath';
 
@@ -9,7 +9,7 @@ const CartItem = ({ product }) => {
   const dispatch = useDispatch();
 
   const handleRemove = () => {
-    dispatch(removeFromCart(product.id));
+    dispatch(removeItem(product.id));
   };
 
   const handleIncrease = () => {

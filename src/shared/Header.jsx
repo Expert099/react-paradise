@@ -25,7 +25,7 @@ const Header = ({ }) => {
         </div>
         <Link to="/product-listing" className="text-white transition-colors duration-300">
 
-          <h3 class="text-white">Plants</h3>
+          <h3 className="text-white">Plants</h3>
         </Link>
 
         <Link to="/cart" className="relative">

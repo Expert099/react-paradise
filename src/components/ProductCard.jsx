@@ -1,7 +1,7 @@
 // ProductCard.js
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { addToCart } from '../features/cart/cartSlice';
+import { addItem } from '../cartSlice';
 
 import {getImagePath}  from '../utils/basePath';
 
@@ -13,7 +13,7 @@ const ProductCard = ({ product }) => {
   const isInCart = cartItems.some((item) => item.id === product.id);
 
   const handleAddToCart = () => {
-    dispatch(addToCart(product));
+    dispatch(addItem(product));
   };
 
   return (
